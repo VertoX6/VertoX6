@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+    <input type="text" id="display" readonly placeholder="CALCULATE"> <br>
+    <button class="btn" value="/"">/</button>
+    <button class="btn" value="7">7</button>
+    <button class="btn" value="8">8</button>
+    <button class="btn" value="9">9</button>
+    <button class="btn" value="*">X</button>
+    <button class="btn" value="4">4</button>
+    <button class="btn" value="5">5</button>
+    <button class="btn" value="6">6</button>
+    <button class="btn" value="-">-</button> 
+    <button class="btn" value="1">1</button>
+    <button class="btn" value="2">2</button>
+    <button class="btn" value="3">3</button>
+    <button class="btn" value="+">+</button>
+    <button class="btn" value="." id="dot">.</button> 
+    <button class="btn" value="0">0</button>
+    <button id="clear">AC</button>
+    <button id="equal">=</button>
+    </div>
+    </div>
+    <script>
+       dot = document.querySelector('#dot');
+        let btn = document.querySelectorAll('.btn');
+        let display = document.querySelector('#display');
+        for(let klawisz of btn){
+            klawisz.addEventListener('click', function(){
+                display.value += klawisz.value;
+            });
+        }
+        let reset = document.querySelector('#clear');
+        reset.addEventListener('click', function(){
+            display.value = null
+        });
+        let submit = document.querySelector('#equal');
+        submit.addEventListener('click', function(){
+           display.value = eval(display.value);
+           if(eval(display.value) == undefined 
+           || isNaN(eval(display.value)) 
+           || !isFinite(eval(display.value))) display.value = 'ERROR';
+        })
+    </script>
+</body>
+</html>
