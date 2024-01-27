@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@700&family=Rubik:wght@400&display=swap');
+html{
+    scroll-behavior: smooth;
+    cursor: default;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    color: white;
+    font-family: Poppins;
+    background-image: linear-gradient(90deg,black 30%, #02001b);
+}
+/*HEADER START*/
+a[href=menu]{
+    cursor: pointer;
+}
+header{
+    animation: show 1.5s;
+    height: 100vh;
+}
+header h1{
+    animation: skok 1s alternate infinite;
+}
+h1{
+    word-break: break-all;
+    word-wrap: break-word;
+    margin: 250px 0 0 250px;
+    font-size: 800%;
+    text-shadow: 5px 5px 20px grey;
+}
+header h1 a{
+    text-decoration: underline white;
+}
+header h1:hover{
+    transition: .5s;
+}
+h1 span{
+    color: whitesmoke;
+}
+h1 span:hover{ 
+    /* cursor: pointer; */
+    transition: 0.3s;
+    color: grey;
+    transform: scaleX(2);
+}
+header p{
+    margin-left: 250px;
+    display: inline-block;
+    transition: .6s;
+    font-size: 120%;
+    font-weight: bold;
+    animation: show2 2s ;
+}
+header p:hover{
+    color: grey;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: .3s;
+}
+/*HEADER END*/
+/*animation*/
+@keyframes show{
+    0% {transform: translateY(-100%);
+    opacity: 0}
+    100% {transform: translateY(0);
+    opacity: 1;}
+}
+@keyframes show2{
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/*MAIN START*/
+.menu-block, 
+.aboutme-block, 
+.school-block, 
+.skills-block, 
+.exp-block, 
+.projects-block {
+    margin-top: 20vh;
+}
+.menu-block h2, 
+.aboutme-block h2, 
+.school-block h2, 
+.skills-block h2, 
+.exp-block h2, 
+.projects-block h2{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 800%;
+    text-shadow: 5px 5px 20px grey;
+    animation: czcionka 20s infinite alternate;
+    text-transform: uppercase;
+}
+.menu-block{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-image: linear-gradient(90deg,black 30%, #02001b);
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+}
+.menu-block-info ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 200%;
+    list-style-type: none;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.menu-block-info li::before{
+    content: '\21D2';
+    color: #00ccff;   
+}
+.menu-block-info li::after{
+    content: '\21D0';
+    color: #00ccff;   
+}
+.menu-block-info li:hover{
+    animation: rusz .1s infinite alternate;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    transition: .2s;
+    text-decoration: underline;
+    
+}
+.about span{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    margin: 10px;
+}
+.about{
+    text-wrap: wrap;
+    word-wrap: break-word;
+    margin-top: 50px;
+}
+#skills li::before{
+    content: '\2714     ';
+}
+#skills li{
+    font-size: 180%;
+    list-style-type: none;
+}
+.aboutme-block span{
+    padding: 10px;
+    max-width: 60%;
+    margin: auto;
+}
+/*animation*/
+@keyframes skok{
+    0% {transform:translate(0)} 
+    100% {transform: translate(0px, -20px);}
+}
+@keyframes rusz{
+    from{ transform: rotate(3deg); }
+    to{ transform:  rotate(-3deg); }
+}
+@keyframes czcionka{
+    0% { color: rgba(255, 255, 255, 1); }
+    25% { color: rgb(143, 143, 143); }
+    50% { color: #00ccff; }
+    100% { color: #ff7b00; }
+}
+/*responsive devices*/
+@media only screen and (max-width: 700px){
+     h1{
+        font-size: 400%;
+        margin: 200px 0 0 20px;
+    }
+    header{
+        height: 800px;
+    }
+    header p{
+        margin: 20px;
+    }
+    .menu-block h2, 
+    .aboutme-block h2, 
+    .school-block h2, 
+    .skills-block h2, 
+    .exp-block h2, 
+    .projects-block h2{
+        font-size: 250%;
+        max-width: 100%;
+    }
+    .menu-block{
+        position: inherit;
+    }
+    .menu-block-info ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        clear: both;
+        font-size: 230%;
+        padding: 0;
+    }
+    .menu-block-info li::before{
+        content: '';
+    }
+    .menu-block-info li{
+        border-bottom: 1px solid white;
+        word-wrap: break-word;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    .about{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #skills ul{
+        text-align: left;
+    }
+}
+.exp-block p{
+    font-size: 300%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
