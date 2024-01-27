@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .modal{
+           margin: auto;
+            width: 40%;
+            background-color: rgb(21, 196, 255);
+            min-height: 200px;
+            text-align: center;
+            z-index: 9999;
+            top: 20%;
+            left: 30%;
+            position: fixed;
+            border-radius: 20px;
+            animation: show .6s; 
+        }
+        .modal p{
+            margin-top: 40px;
+            padding: 50px;
+            display: inline-block;
+            background-color: rgb(145, 215, 255);
+            border-radius: 20px;
+        }
+        body{
+            background-color: rgb(147, 150, 142);
+        }
+        .modalBackground{
+            background-color: rgba(0, 0, 0, .5);
+            display: none;
+            z-index: 999;
+            height: 1000px;
+            min-width: 100%;
+            top: 0;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+        }
+        /* .blur1{
+            animation: blur 5s;    
+        } */
+        @keyframes show{
+            from {top: 500px; opacity: 0}
+  to {top: 20%; opacity: 1;}
+        }
+        @keyframes blur{
+            from {
+                filter: blur(0px);
+            }
+            to{
+                filter: blur(2px);
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="blur1">
+    <button>Dodaj do koszyka1</button>
+    <button>Dodaj do koszyka2</button>
+    <button>Dodaj do koszyka3</button>
+    <button>Dodaj do koszyka4</button>
+    <h1>TEST</h1>
+    <h1>TEST</h1>
+    <h1>TEST</h1>
+    <h1>TEST</h1>
+    <H1>TEST</H1>
+    <h1>TEST</h1>
+    <h1>TEST</h1>
+    <h1>TEST</h1>
+    <h1>TEST</h1>
+    </div>
+    <div class="smth">
+    </div>
+     <div class="modalBackground">
+    <!-- <div class="modal">
+        <p>Dodany do koszyka!</p>
+    </div> -->
+    </div>
+    </div>
+    <script>
+        const modalbg = document.querySelector('.modalBackground');
+        const btn = document.querySelectorAll('button');
+        const modal = document.querySelector('.modal');
+        const blur1 = document.querySelector('.blur1')
+        const kontener = document.querySelector('.container');
+        for(let btns of btn){
+        btns.addEventListener('click', function(){
+            modalbg.style.display = 'block';
+            blur1.style.animation = 'blur 2s';
+            blur1.style.filter = 'blur(2px)';
+            document.querySelector('.smth').innerHTML =  `<div class="modal">
+        <p>Dodany do koszyka!</p>
+    </div>
+    </div>`;
+        } );
+    }
+        window.onclick = function(event) {
+  if (event.target == modalbg) {
+    modalbg.style.display = "none";
+    blur1.style.filter = 'none';
+    document.querySelector('.smth').innerHTML = '';
+    blur1.style.animation = 'none';
+  }
+}
+    </script>
+</body>
+</html>
