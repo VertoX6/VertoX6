@@ -20,10 +20,10 @@
             temperature: data.main.temp,
            }
            if(weatherApp.main === 'Snow') {
-             weatherImg = 'https://openweathermap.org/img/wn/10d@2x.png'; 
+             weatherImg = 'https://openweathermap.org/img/wn/13d@2x.png'; 
         }
         else if(weatherApp.main === 'Rain') {
-            weatherImg = './snow.jpg'; 
+            weatherImg = 'https://openweathermap.org/img/wn/10d@2x.png'; 
         }else if(weatherApp.main === 'Clouds') {
         weatherImg = 'https://openweathermap.org/img/wn/02d@2x.png'; 
          }
@@ -46,7 +46,7 @@ else if(weatherApp.main === 'Thunderstorm') {
         <h1>WEATHER FOR: <br>${(weatherApp.name).toUpperCase()}</h1>
         <p>COUNTRY: ${weatherApp.country}</p>
         <p>Timezone: ${weatherApp.timezone/3600} GMT</p>
-        <img width="200px" src="${weatherImg}" alt="Weather Image">
+        <img width="150px" src="${weatherImg}" alt="Weather Image">
         <p>Weather: ${weatherApp.main}</p>
         <p>Temperature: ${(weatherApp.temperature-273).toFixed()} °C</p>
         <p>Pressure: ${weatherApp.pressure} h/Pa</p>`;
