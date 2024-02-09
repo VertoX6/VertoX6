@@ -80,4 +80,7 @@ body{
     .search input{
         padding: 0;
     }
+    .search-box img{
+        width: 100px;
+    }
 }
