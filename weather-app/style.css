@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(52, 42, 80);
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 530px;
+}
+.search-box{
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px black;
+    padding: 20px;
+    margin-top: 20vh;
+    border-radius: 50px;
+    background-color: white;
+    overflow: hidden;
+    transition: 1s;
+    animation: slide 1s;
+}
+
+.search i{
+    margin: 10px;
+}
+.search input{
+    padding: 1rem;
+    text-align: center;
+    font-size: 130%;
+    border: none;
+    text-transform: uppercase;
+}
+.search input::placeholder{
+    font-size: 120%;
+    text-transform: uppercase;
+}
+.search input:focus{
+    outline: none;
+}
+.btn{
+    padding: 10px;
+}
+.weather-display{
+    background-color: white;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    border-radius: 50px;
+    transition: 1s;
+    display: none;
+}
+@keyframes show{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slide{
+    from{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 530px){
+    .search{
+        text-align: center;
+    }
+    .search input{
+        padding: 0;
+    }
+}
