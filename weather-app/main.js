@@ -2,6 +2,7 @@
         const btn = document.querySelector('.btn');
         const searchBox = document.querySelector('.search-box');
         const weatherDisplay = document.querySelector('.weather-display');
+        // const body = document.querySelector('body');
         let weatherImg = '';
         btn.addEventListener('click', () => {
             const input = document.querySelector('input');
@@ -39,19 +40,20 @@ else if(weatherApp.main === 'Drizzle') {
     weatherImg = 'https://openweathermap.org/img/wn/09d@2x.png'; 
 }
 else if(weatherApp.main === 'Thunderstorm') {
-    weatherImg = 'https://openweathermap.org/img/wn/11d@2x.png'; 
+    weatherImg = 'https://openweathermap.org/img/wn/11d@2x.png';
 }
         weatherDisplay.style.display = 'block';
         weatherDisplay.innerHTML = `
         <h1>WEATHER FOR: <br>${(weatherApp.name).toUpperCase()}</h1>
-        <p>COUNTRY: ${weatherApp.country}</p>
-        <p>Timezone: ${weatherApp.timezone/3600} GMT</p>
+        <p>COUNTRY: <b>${weatherApp.country}</b></p>
+        <p>Timezone: <b>${weatherApp.timezone/3600} GMT</b></p>
         <img width="150px" src="${weatherImg}" alt="Weather Image">
-        <p>Weather: ${weatherApp.main}</p>
-        <p>Temperature: ${(weatherApp.temperature-273).toFixed()} °C</p>
-        <p>Pressure: ${weatherApp.pressure} h/Pa</p>`;
+        <p>Weather: <b>${weatherApp.main}</b></p>
+        <p>Temperature: <b>${(weatherApp.temperature-273).toFixed()} °C</b></p>
+        <p>Pressure: <b>${weatherApp.pressure} h/Pa</b></p>`;
         console.log(data);
         weatherDisplay.style.animation = 'show 1s ease';
+        searchBox.style.opacity = ".5";
         udane()
         }).catch(error =>{
         weatherDisplay.style.display = 'block';
