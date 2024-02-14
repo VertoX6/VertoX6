@@ -9,22 +9,28 @@ body{
     justify-content: center;
     background-color: rgb(52, 42, 80);
     font-family: 'Poppins', sans-serif;
+    transition: 1s;
+    background-image: url(https://www-cdn.eumetsat.int/files/styles/16_9_large/s3/2023-09/clouds-aspot.jpg);
+    background-repeat: no-repeat;
 }
 .container{
     max-width: 530px;
 }
 .search-box{
     border: 1px solid black;
-    box-shadow: 10px 10px 10px black;
+    box-shadow: 0 10px 10px black;
     padding: 20px;
     margin-top: 20vh;
     border-radius: 50px;
     background-color: white;
     overflow: hidden;
-    transition: 1s;
+    transition: 2s;
     animation: slide 1s;
+    animation: jump .8s alternate infinite;
 }
-
+.search-box:hover{
+    animation: none;
+}
 .search i{
     margin: 10px;
 }
@@ -34,6 +40,7 @@ body{
     font-size: 130%;
     border: none;
     text-transform: uppercase;
+    
 }
 .search input::placeholder{
     font-size: 120%;
@@ -54,6 +61,14 @@ body{
     border-radius: 50px;
     transition: 1s;
     display: none;
+}
+@keyframes jump{
+    from{
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(10px);
+    }
 }
 @keyframes show{
     from {
