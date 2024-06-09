@@ -12,11 +12,11 @@ body{
     transition: 1s;
     background-image: url(./clouds.jpeg);
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 .container{
     max-width: 530px;
-    transition: 0.5s;
 }
 
 .search-box{
