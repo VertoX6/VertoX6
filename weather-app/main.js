@@ -2,7 +2,6 @@
         const btn = document.querySelector('.btn');
         const searchBox = document.querySelector('.search-box');
         const weatherDisplay = document.querySelector('.weather-display');
-        // const body = document.querySelector('body');
         let weatherImg = '';
         btn.addEventListener('click', () => {
             const input = document.querySelector('input');
@@ -54,14 +53,14 @@ else if(weatherApp.main === 'Thunderstorm') {
         console.log(data);
         weatherDisplay.style.animation = 'show 1s ease';
         searchBox.style.opacity = ".5";
-        udane()
+      
         }).catch(error =>{
         weatherDisplay.style.display = 'block';
         weatherDisplay.innerHTML = `
         <h1>City not found.</h1>`;
         console.log('error');
         weatherDisplay.style.animation = 'show 1s ease';
-        nieudane();
+       
         })
         );
         getAPI()
