@@ -22,6 +22,16 @@ header h1 {
   text-shadow: black 10px 5px 10px;
   cursor: default;
   color: #d8d8ff;
+  animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes himg {
@@ -36,12 +46,6 @@ header h1 {
 @media only screen and (max-width: 1000px) {
   .body header {
     font-size: 1rem;
-    display: block;
-  }
-  .body header img {
-    width: 100%;
-    float: left;
-    height: 14vh;
     display: block;
   }
   .body nav {
