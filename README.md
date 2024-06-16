@@ -1,5 +1,4 @@
-- portfolio
-- My projects
+! My projects
 
 - aboutme -> o mnie
 - calkulator -> zywkły kalkulator
