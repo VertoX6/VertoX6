@@ -30,13 +30,15 @@ window.addEventListener('load', ()=>{
     oilVehicles.style.display = 'flex';
     electricVehicles.style.display = 'none';
     faq.style.display = 'none';
-    carValue.innerHTML = 'OBLICZ WARTOŚĆ POJAZDU';
     
-    carValue.addEventListener('click', ()=>{
+carValue.addEventListener('click', ()=>{
+    carValue.classList.remove('btn-alert')
         if(model.value == 0){
-            carValue.innerHTML = `WYBIERZ MODEL POJAZDU`;
+            carValue.classList.add('btn-alert');
+            carValue.innerHTML = `<span>&#33;</span> WYBIERZ MODEL POJAZDU`;
         }
         else{
+            carValue.classList.remove('btn-alert')
         priceEle = 0;
         price = parseInt(model.value) + parseInt(intakesR.value) + parseInt(spoiler.value) + parseInt(intakesM.value) + parseInt(up1.value) 
         + parseInt(up2.value) + parseInt(eTransport.value) + parseInt(rims.value) + parseInt(up3.value) + parseInt(engine.value) + parseInt(keys.value) 
@@ -80,12 +82,15 @@ list1.addEventListener('click', ()=>{
     faq.style.display = 'none';
     carValue.style.display = 'block';
     carValue.innerHTML = 'OBLICZ WARTOŚĆ POJAZDU';
+    carValue.classList.remove('btn-alert')
 
     carValue.addEventListener('click', ()=>{
         if(model.value == 0){
-            carValue.innerHTML = `WYBIERZ MODEL POJAZDU`;
+            carValue.classList.add('btn-alert');
+            carValue.innerHTML = `<span>&#33;</span> WYBIERZ MODEL POJAZDU`;
         }
         else{
+            carValue.classList.remove('btn-alert');
         priceEle = 0;
         price = parseInt(model.value) + parseInt(intakesR.value) + parseInt(spoiler.value) + parseInt(intakesM.value) + parseInt(up1.value) 
         + parseInt(up2.value) + parseInt(eTransport.value) + parseInt(rims.value) + parseInt(up3.value) + parseInt(engine.value) + parseInt(keys.value) 
@@ -106,12 +111,15 @@ list2.addEventListener('click', ()=>{
     faq.style.display = 'none';
     carValue.style.display = 'block';
     carValue.innerHTML = 'OBLICZ WARTOŚĆ POJAZDU'; 
+    carValue.classList.remove('btn-alert')
         
     carValue.addEventListener('click', ()=>{
         if(modelEle.value == 0){
-            carValue.innerHTML = `WYBIERZ MODEL POJAZDU`;
+            carValue.classList.add('btn-alert');
+            carValue.innerHTML = `<span>&#33;</span> WYBIERZ MODEL POJAZDU`;
         }
         else{
+            carValue.classList.remove('btn-alert')
         price = 0;
         priceEle = parseInt(modelEle.value) + parseInt(spoilerEle.value) + parseInt(up1Ele.value) 
         + parseInt(up2Ele.value) + parseInt(eTransportEle.value) + parseInt(rimsEle.value) + parseInt(up3Ele.value) + parseInt(keysEle.value) 
