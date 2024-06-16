@@ -27,10 +27,11 @@ let hydraEle = document.querySelector('#hydraEle');
 let eTransportEle = document.querySelector('#eTransportEle');
 
 window.addEventListener('load', ()=>{
-    oilVehicles.style.display = 'flex'
+    oilVehicles.style.display = 'flex';
     electricVehicles.style.display = 'none';
     faq.style.display = 'none';
     carValue.innerHTML = 'OBLICZ WARTOŚĆ POJAZDU';
+    
     carValue.addEventListener('click', ()=>{
         if(model.value == 0){
             carValue.innerHTML = `WYBIERZ MODEL POJAZDU`;
@@ -42,7 +43,7 @@ window.addEventListener('load', ()=>{
         + parseInt(lpg.value) + parseInt(fuel.value) + parseInt(glass.value) + parseInt(limiter.value) + parseInt(fotoradar.value) + parseInt(stereo.value) 
         + parseInt(radio.value) + parseInt(nitro.value) + parseInt(fakeNitro.value) + parseInt(up4.value) + parseInt(counterColor.value) 
         + parseInt(lampColor.value) + parseInt(abs.value) + parseInt(hydra.value);
-        carValue.innerHTML = `WARTOŚĆ POJAZDU: ${price}`;
+        carValue.innerHTML = `WARTOŚĆ POJAZDU: ${price} PLN`;
         }
         });
     
@@ -73,9 +74,9 @@ let eTransport = document.querySelector('#eTransport');
 let intakesR = document.querySelector('#intakesR');
 let intakesM = document.querySelector('#intakesM');
 list1.addEventListener('click', ()=>{
-
     oilVehicles.style.display = 'flex'
     electricVehicles.style.display = 'none';
+    oilVehicles.style.animation = 'showMe 1.5s'
     faq.style.display = 'none';
     carValue.style.display = 'block';
     carValue.innerHTML = 'OBLICZ WARTOŚĆ POJAZDU';
@@ -91,7 +92,7 @@ list1.addEventListener('click', ()=>{
         + parseInt(lpg.value) + parseInt(fuel.value) + parseInt(glass.value) + parseInt(limiter.value) + parseInt(fotoradar.value) + parseInt(stereo.value) 
         + parseInt(radio.value) + parseInt(nitro.value) + parseInt(fakeNitro.value) + parseInt(up4.value) + parseInt(counterColor.value) 
         + parseInt(lampColor.value) + parseInt(abs.value) + parseInt(hydra.value);
-        carValue.innerHTML = `WARTOŚĆ POJAZDU: ${price}`;
+        carValue.innerHTML = `WARTOŚĆ POJAZDU: ${price} PLN`;
         console.log(price);
         }
         });
@@ -101,6 +102,7 @@ const list2 = document.querySelector('#list2');
 list2.addEventListener('click', ()=>{
     oilVehicles.style.display = 'none';
     electricVehicles.style.display = 'flex';
+    electricVehicles.style.animation = 'showMe 1.5s'
     faq.style.display = 'none';
     carValue.style.display = 'block';
     carValue.innerHTML = 'OBLICZ WARTOŚĆ POJAZDU'; 
@@ -116,7 +118,7 @@ list2.addEventListener('click', ()=>{
         + parseInt(glassEle.value) + parseInt(limiterEle.value) + parseInt(fotoradarEle.value) + parseInt(stereoEle.value) 
         + parseInt(radioEle.value) + parseInt(nitroEle.value) + parseInt(fakeNitroEle.value) + parseInt(up4Ele.value) + parseInt(counterColorEle.value) 
         + parseInt(lampColorEle.value) + parseInt(absEle.value) + parseInt(hydraEle.value);
-        carValue.innerHTML = `WARTOŚĆ POJAZDU: ${priceEle}`;
+        carValue.innerHTML = `WARTOŚĆ POJAZDU: ${priceEle} PLN`;
         console.log(priceEle);
         }
 });
@@ -125,6 +127,7 @@ list2.addEventListener('click', ()=>{
 const faq = document.querySelector('#faq');
 const list3 = document.querySelector('#list3');
 list3.addEventListener('click', ()=>{
+    faq.style.animation = 'showMe 1.5s'
     faq.style.display = 'flex';
     oilVehicles.style.display = 'none'
     electricVehicles.style.display = 'none';
