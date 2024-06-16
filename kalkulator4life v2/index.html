@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator 4Life</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="yeskear, M4rcinek">
+    <link rel="shortcut icon" href="https://mta4life.pl/uploads/monthly_2018_10/4l-icon.ico.ico.bff5abd832a5ee7493454c74eab8b8e0.ico" type="image/x-icon">
+    <link rel="stylesheet" href="calc4life.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body class="body">
+    <div class="container">
+        <p>Kalkulator 4Life&copy; by M4rcinek & yeskear</p>
+    <header>
+        <h1>KALKULATOR</h1>
+        <a href="https://mta4life.pl" target="_blank"><img class="img-fluid" src="4life-logo.png" alt="logo-4life"></a>
+    </header>
+    <nav>
+        <ul class="row d-flex p-2">
+            <li class="col-sm text-center" id="list1">Pojazdy spalinowe</li>
+            <li class="col-sm text-center" id="list2">Pojazdy elektryczne</li>
+            <li class="col-sm text-center" id="list3">FAQ</li>
+        </ul>
+        <button id="carValue">OBLICZ WARTOŚĆ POJAZDU</button>
+    </nav>
+    <main>
+        <div id="oilVehicles" class="row">
+            <div class="col">
+                <select class="form-select" id="model" aria-label="Default select example">
+                    <option selected value="0">MODEL POJAZDU</option>
+                    <optgroup label="Klasa Niska">
+                    <option value="3800"> Moonbeam (418) </option>
+                    <option value="3800"> Perennial (404) </option>            
+                    <option value="3800">Walton (478) </option>          
+                    <option value="4900"> Manana (410) </option>           
+                    <option value="11000"> Bobcat (422) </option>        
+                    <option value="14000"> Virgo (491) </option>           
+                    <option value="14500">Picador</option>       
+                    <option value="15000"> Previon (436) </option>         
+                    <option value="16200">Bravura (401) </option>           
+                    <option value="20000"> Esperanto (419) </option>           
+                    <option value="20000"> Glendale (466) </option>           
+                    <option value="23500"> Emperor (585) </option>     
+                    <option value="25000">Sadler (543) </option>     
+                    <option value="25000"> Solair (458) </option>        
+                    <option value="25000"> Tampa (549) </option>      
+                    <option value="25000"> Willard (529) </option>           
+                    <option value="20500">Greenwood (492) </option>          
+                    <option value="25000"> Vincent (540) </option>         
+                    <option value="28000">Quadbike (471) </option>         
+                    <option value="30000">VAIR (4801) </option>         
+                    <option value="30000"> Cadrona (527) </option>         
+                    <option value="30000"> Primo (547)</option>    
+                    <option value="32000">Nebula (516) </option>       
+                    <option value="30000">Cabbie (438) </option>      
+                    <option value="30000"> Vincent Combi (540) </option>     
+                    <option value="32000">Sunrise (550) </option>    
+                    <option value="30000">Oceanic (467) </option>   
+                    <option value="35000"> Regina (479) </option>           
+                    <option value="31500"> Intruder (546) </option>   
+                    <option value="35000">Journey (508) </option>    
+                    <option value="35000"> Combi (516) </option>  
+                    <option value="34000"> Blista Compact (496) </option> 
+                    <option value="40000"> Mesa (500) </option>     
+                    <option value="40000">Sunrise Combi (550) </option>     
+                    <option value="40000"> Stallion (439)</option>          
+                    <option value="40000">Majestic (517) </option>           
+                    <option value="40000"> Clover (542) </option>           
+                    <option value="40000"> Stanier (604) </option>            
+                    <option value="40000"> Landstalker (400) </option>           
+                    <option value="45000"> Club (589) </option>            
+                    <option value="40000"> Admiral (445) </option>            
+                    <option value="40000"> Admiral (445)</option>           
+                    <option value="45000"> Admiral Combi (445)</option>           
+                    <option value="45000"> Tahoma (566) </option>
+                    <option value="45000">Washington</option>
+                    <option value="50000"> Buccaneer</option>        
+                    <option value="50000"> Stallion Fastback (439)</option>
+                    <option value="55000"> Euros</option>   
+                    <option value="60000"> Fortune</option> 
+                    <option value="65000"> Premier Sedan(426)</option>
+                    </optgroup>
+                    <optgroup label="Klasa Średnia/Wysoka">
+                        <option value="55000"> Stratum Wagon (561)</option>
+                        <option value="60000"> Stratum Sedan (561)</option>
+                        <option value="60000">Rancher</option>
+                        <option value="70000"> Alpha</option>
+                        <option value="70000"> Vincent STD (540)</option>
+                        <option value="70000"> Vincent Combi STD (540)</option>
+                        <option value="70000"> Sabre (475)</option>
+                        <option value="70000"> Uranus (558)</option>
+                        <option value="75000"> Premier Wagon (426)</option>
+                        <option value="75000"> Merit Victory (551)</option>
+                        <option value="80000"> Stainer STD (604)</option>
+                        <option value="80000"> Feltzer (533)</option>
+                        <option value="85000"> Burrito (482)</option>
+                        <option value="90000"> Flash (565)</option>
+                        <option value="95000">Atlanta (4794)</option>
+                        <option value="100000"> Tornado (576)</option>
+                        <option value="105000">Schafter (4802)</option>
+                        <option value="110000"> Phoenix (603)</option>
+                        <option value="110000"> Yosemite (554)</option>
+                        <option value="130000"> Windsor (555)</option>
+                        <option value="140000"> Sentinel (405)</option>
+                        <option value="150000"> Sentinel Wagon (405)</option>
+                        <option value="150000"> Buffalo (402)</option>
+                        <option value="150000"> Stallion DSD (439)</option>            
+                        <option value="150000"> Sentinel STD (405)</option>
+                        <option value="160000"> Sentinel Wagon STD (405)</option>
+                        <option value="165000">BF Injection (424)</option>
+                        <option value="170000"> Slamvan (535)</option>
+                        <option value="170000">Sentinel Classic (4795)</option>
+                        <option value="180000"> Jester (559)</option>
+                        <option value="190000"> ZR-350 (477)</option>
+                        <option value="190000"> Super GT (506)</option>
+                        <option value="200000"> Blade (536)</option>
+                        <option value="200000">Huntley</option>
+                        <option value="220000"> Jester DSD (559)</option>
+                        <option value="220000"> ZR-250 (4798)</option>
+                        <option value="220000"> Sandking (495)</option>
+                        <option value="240000">Savanna (567)</option>
+                        <option value="240000"> Zion Coupe (459)</option>
+                        <option value="240000"> Zion Coupe STD (459)</option>
+                        <option value="240000"> Admiral DSD (445)</option>
+                        <option value="240000"> Admiral DSD Combi(445)</option>
+                        <option value="240000"> Sultan Wagon (560)</option>
+                        <option value="250000"> Sultan Sedan (560)</option>
+                        <option value="250000"> Feltzer Coupe DSD (533)</option>
+                        <option value="260000"> Buffalo DSD (402)</option>
+                        <option value="300000">Bandito (568)</option>
+                        <option value="300000"> Comet (480)</option>
+                        <option value="330000"> Elegy (562)</option>
+                        <option value="330000"> Deluxo (605)</option>
+                        <option value="350000"> Coquette Classic (494)</option>                
+                      </optgroup> 
+                        <optgroup label="Klasa Premium">
+                            <option value="400000"> Banshee (429)</option>
+                            <option value="400000">Elegant (507)</option>
+                            <option value="475000"> Cheetah (415)</option>
+                            <option value="500000"> Stretch (409)</option>
+                            <option value="600000"> Bullet (541)</option>
+                            <option value="650000">Mamba (4804)</option>
+                            <option value="850000">Broadway (575)</option>
+                            <option value="950000">Patriot (470)</option>
+                            <option value="900000">Hotknife (434)</option>
+                            <option value="1000000">Schafter DSD-R (4803)</option>
+                            <option value="1350000"> Sabre Sport (475)</option>
+                            <option value="1400000"> Phoenix Sport (603)</option>
+                            <option value="1500000"> Hermes (474)</option>
+                            <option value="1500000">Camper (483)</option>
+                            <option value="1600000"> Zion Sport (459)</option>
+                            <option value="1650000"> Huntley Sport (579)</option>
+                            <option value="1600000">Remington (534)</option>
+                            <option value="1700000"> Stinger (503)</option>
+                            <option value="2100000"> Clover Sport (542)</option>
+                            <option value="2200000">Rancher Long (490)</option>
+                            <option value="2500000"> Voodoo (412)</option>
+                            <option value="2500000"> Turismo (451)</option>
+                            <option value="2000000"> Hustler (545)</option>
+                            <option value="3000000"> Infernus (411)</option>
+                            <option value="5000000">Stafford</option>
+                        </optgroup>
+                             <optgroup label="Custom ID">
+                                  <option value="41000">Weevil</option>
+                                  <option value="95000">Atlanta</option>
+                                   <option value="170000">Sentinel Classic</option>
+                                    <option value="8000">Walton ND</option>
+                                    <option value="220000">ZR-250</option>
+                                    <option value="18500">VAIR</option>
+                                    <option value="100000">Schafter</option>
+                                    <option value="1000000">Schafter DSD-R</option>
+                                   <option value="650000">Mamba</option>
+                                   <option value="72000">Solace</option>
+                                   <option value="170000">Itoku</option>
+                                   <option value="800000">Itoku Luxury</option>
+                                   <option value="1200000">Yosemite Long</option>
+                                   <option value="750000">ZR-250 DSD-R</option>
+                                   <option value="33000">Foxtrotter</option>
+                                   <option value="118000">Sentinel Coupe</option>
+                                   <option value="63000">MSK-1000</option>
+                                   <option value="350000">Coquette Classic</option>
+                                </optgroup>
+                  </select>
+                  <select id="engine" class="form-select" aria-label="Default select example">
+                    <option selected value="0">SILNIK</option>
+                    <option value="0">1.6</option>
+                    <option value="50000">1.8</option>
+                    <option value="112500">2.0</option>
+                    <option value="187500">2.2</option>
+                  </select>
+                  <select id="rims" class="form-select" aria-label="Default select example">
+                    <option selected value="0">FELGI</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="1305">OFF-ROAD(1025)</option>
+                    <option value="1305">SHADOW(1073)</option>
+                    <option value="1305">MEGA(1074)</option>
+                    <option value="1305">RIMSHINE(1075)</option>
+                    <option value="1305">WIRES(1076)</option>
+                    <option value="1305">CLASSIC(1077)</option>
+                    <option value="1305">TWIST(1078)</option>
+                    <option value="1305">CUTTER(1079)</option>
+                    <option value="1305">SWITCH(1080)</option>
+                    <option value="1305">GROVE(1081)</option>  
+                    <option value="1305">IMPORT(1082)</option> 
+                    <option value="1305">DOLLAR(1083)</option>
+                    <option value="1305">TRANCE(1084)</option>
+                    <option value="1305">ATOMIC(1085)</option>
+                    <option value="1305">AHAB(1096)
+                  </select>
+                  <select id="spoiler" class="form-select" aria-label="Default select example">
+                    <option selected value="0">SPOJLER</option>
+                    <option value="0">NIE POSIADA</option>
+                        <option value="2200">(1000)</option>
+                        <option value="2750">(1001)</option>
+                        <option value="2200">(1002)</option>
+                        <option value="2750">(1003)</option>
+                        <option value="1400">(1014)</option>
+                        <option value="2200">(1015)</option>
+                        <option value="2300">(1016)</option>
+                        <option value="2550">(1023)</option>
+                        <option value="1700">(1049)</option>
+                        <option value="1400">(1050)</option>
+                        <option value="1400">(1058)</option>
+                        <option value="1850">(1060)</option>
+                        <option value="4150">(1138)</option>
+                        <option value="3600">(1139)</option>
+                        <option value="3200">(1146)</option>
+                        <option value="3850">(1147)</option>
+                        <option value="4500">(1158)</option>
+                        <option value="3200">(1162)</option>
+                        <option value="2000">(1163)</option>
+                        <option value="4500">(1164)</option>
+                  </select>
+                  <select id="limiter" class="form-select" aria-label="Default select example">
+                    <option selected value="0">OGRANICZNIK</option>
+                    <option value="0">NIE POSIADA</option>
+                   <option value="1800">POSIADA</option>
+                  </select>
+                  <select id="fotoradar" class="form-select" aria-label="Default select example">
+                    <option selected value="0">WYKRYWACZ FOTORADARÓW</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="4500">POSIADA</option>
+                  </select>
+                  <select id="radio" class="form-select" aria-label="Default select example">
+                    <option selected value="0">CB RADIO</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="1260">Posiada</option>
+                  </select>
+                  <select id="stereo" class="form-select" aria-label="Default select example">
+                    <option selected value="0">STEREO</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="270">Posiada</option>
+                  </select>
+                  <select id="up1" class="form-select" aria-label="Default select example">
+                    <option selected value="0">UP1</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="42500">Posiada</option>
+                  </select>
+                  <select id="up2" class="form-select" aria-label="Default select example">
+                    <option selected value="0">UP2</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="25000">Posiada</option>
+                  </select>
+                  <select id="up3" class="form-select" aria-label="Default select example">
+                    <option selected value="0">UP3</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="25000">Posiada</option>
+                  </select>
+                  <select id="up4" class="form-select" aria-label="Default select example">
+                    <option selected value="0">UP4</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="25000">Posiada</option>
+                  </select>
+            </div>
+            <div class="col">
+                <select id="abs" class="form-select" aria-label="Default select example">
+                    <option selected value="0">ABS</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="16200">Posiada</option>
+                  </select>
+                  <select id="fuel" class="form-select" aria-label="Default select example">
+                    <option selected value="0">BAK PALIWA</option>
+                    <option value="0">35 Litrów</option>
+                    <option value="12500">50 Litrów</option>
+                    <option value="17500">75 Litrów</option>
+                    <option value="22500">90 Litrów</option>
+                  </select>
+                  <select id="lpg" class="form-select" aria-label="Default select example">
+                    <option selected value="0">BUTLA LPG</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="4000">25 Litrów</option>
+                    <option value="6400">50 Litrów</option>    
+                    <option value="10000">75 Litrów</option>
+                  </select>
+                  <select id="fakeNitro" class="form-select" aria-label="Default select example">
+                    <option selected value="0">ATRAPA NITRO</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="10000">Duża butla (1008)</option>
+                    <option value="17500">Mała butla (1009)</option>
+                    <option value="20000">Dwie małe butle (1010)</option>
+                  </select>
+                  <select id="nitro" class="form-select" aria-label="Default select example">
+                    <option selected value="0">NITRO</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="180000">Posiada</option>
+                  </select>
+                  <select id="glass" class="form-select" aria-label="Default select example">
+                    <option selected value="0">PRZYCIEMNIANIE SZYB</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="7500">80%</option>
+                    <option value="17500">60%</option>   
+                    <option value="27500">40%</option>
+                    <option value="37500">20%</option>
+                  </select>
+                  <select id="counterColor" class="form-select" aria-label="Default select example">
+                    <option selected value="0">KOLOR LICZNIKA</option>
+                    <option value="0">Nie posiada</option>
+                    <option class="white" value="5000">Biały</option>
+                    <option class="ciemny" value="5000">Ciemny</option>
+                    <option class="cargo" value="7000">Cargo</option>
+                    <option class="czekolada" value="7000">Czekoladowy</option>
+                    <option class="mieta" value="7000">Miętowy</option>
+                    <option class="losos" value="7000">Łososiowy</option>
+                    <option class="ziel-ciemny" value="7000">Zielony (ciemny)</option>
+                    <option class="granat" value="7000">Granatowy</option>
+                    <option class="limonka" value="7000">Limonkowy</option>
+                    <option class="oliwka" value="7000">Oliwkowy</option>
+                    <option class="kardynal" value="7000">Kardynalski</option>
+                    <option class="winny" value="7000">Winny</option>
+                    <option class="kawa" value="7000">Kawowy</option>
+                    <option class="szkarlat" value="7000">Szkarłatny</option>
+                    <option class="butelka" value="7500">Butelkowy</option>
+                    <option class="pomarancz" value="7500">Pomarańczowy</option>
+                    <option class="fresh" value="7500">FRESH</option>
+                    <option class="lazur" value="7500">Lazurowy</option>
+                    <option class="carrot" value="7500">CARROT</option>
+                    <option class="rubin" value="7500">Rubinowy</option>
+                    <option class="zolty" value="7500">Żółty</option>
+                    <option class="purpur" value="7500">Purpurowy</option>
+                    <option class="ultram" value="7500">Ultramaryna</option>
+                    <option class="herbata" value="7500">Herbaciany</option>
+                    <option class="chabr" value="7500">Chabrowy</option>
+                    <option class="cyklamen" value="7500">Cyklamen</option>
+                    <option class="mahon" value="8000">Mahoniowy</option>
+                    <option class="banan" value="8000">Bananowy</option>
+                    <option class="czerwony" value="8000">Czerwony</option>
+                    <option class="ice" value="8000">ICE</option>
+                    <option class="ziel-jasny" value="8000">Zielony(jasny)</option>
+                    <option class="nieb-ciemny" value="8000">Niebieski(ciemny)</option>
+                    <option class="morska-ziel" value="8000">Morska zieleń</option>
+                    <option class="zloty" value="8000">Złocisty</option>
+                    <option class="szmaragd" value="8000">Szmaragdowy</option>
+                    <option class="laguna" value="8000">Lagunowy</option>
+                    <option class="miod" value="8000">Miodowy</option>
+                    <option class="roz" value="8000">Róż Indyjski</option>
+                    <option class="orzech" value="8000">Orzechowy</option>
+                    <option class="indygo" value="8000">Indygo</option>
+                    <option class="alfons" value="8000">Alfonsy</option>
+                    <option class="loudowy" value="8000">Loudowy</option>
+                  </select>
+                  <select id="lampColor" class="form-select" aria-label="Default select example">
+                    <option selected value="0">KOLOR LAMP</option>
+                    <option class="white" value="0">Nie posiada (Białe)</option>
+                    <option class="cargo" value="75000">Cargo</option>
+                    <option class="losos" value="75000">Łososiowy</option>  
+                    <option class="mieta" value="75000">Miętowy</option>
+                    <option class="czekolada" value="75000">Czekoladowy</option>
+                    <option class="ziel-ciemny" value="75000">Zielony (ciemny)</option>      
+                    <option class="oliwka" value="75000">Oliwkowy</option>   
+                    <option class="kardynal" value="75000">Kardynalski</option>   
+                    <option class="butelka" value="75000">Butelkowy</option>             
+                    <option class="granat" value="80000">Granatowy</option>         
+                    <option class="limonka" value="80000">Limonkowy</option>           
+                    <option class="pomarancz" value="80000">Pomarańczowy</option>       
+                    <option class="purpur" value="80000">Purpurowy</option> 
+                    <option class="carrot" value="80000">CARROT</option>       
+                    <option class="kawa" value="75000">Kawowy</option>        
+                    <option class="zolty" value="80000">Żółty</option>       
+                    <option class="nieb-ciemny" value="80000">Niebieski (ciemny)</option>       
+                    <option class="czerwony" value="80000">Czerwony</option>
+                    <option class="szkarlat" value="80000">Szkarłatny</option>  
+                    <option class="winny" value="80000">Winny</option>
+                    <option class="ultram" value="80000">Ultramaryna</option>
+                    <option class="herbata" value="80000">Herbaciany</option>
+                    <option class="mahon" value="80000">Mahoniowy</option>
+                    <option class="banan" value="80000">Bananowy</option>
+                    <option class="fresh" value="85000">FRESH</option>       
+                    <option class="rubin" value="85000">Rubinowy</option>     
+                    <option class="ice" value="85000">ICE</option>      
+                    <option class="ziel-jasny" value="85000">Zielony(jasny)</option>     
+                    <option class="lazur" value="85000">Lazurowe</option>
+                    <option class="chabr" value="85000">Chabrowe</option>        
+                    <option class="cyklamen" value="85000">Cyklamenowe</option>        
+                    <option class="morska-ziel" value="85000">Morska zieleń</option>   
+                    <option class="zloty" value="85000">Złociste</option>
+                    <option class="roz" value="85000">Róż Indyjski</option>    
+                    <option class="miod" value="85000">Miodowe</option>   
+                    <option class="orzech" value="85000">Orzechowe</option>
+                    <option class="szmaragd" value="90000">Szmaragdowe</option>       
+                    <option class="laguna" value="90000">Lagunowe</option>    
+                    <option class="indygo" value="90000">Indygo</option>       
+                    <option class="alfons" value="90000">Alfonsowe</option>       
+                    <option class="loudowy" value="90000">Loudowy'owe</option>
+                  </select>
+                  <select id="keys" class="form-select" aria-label="Default select example">
+                    <option selected value="0">KLUCZE</option>
+                    <option value="0">0</option>
+                        <option value="7500">1</option>
+                        <option value="15000">2</option>
+                        <option value="22500">3</option>
+                        <option value="30000">4</option>
+                        <option value="37500">5</option>
+                        <option value="45000">6</option>
+                        <option value="52500">7</option>
+                        <option value="60000">8</option>
+                        <option value="67500">9</option>
+                        <option value="75000">10</option>
+                        <option value="82500">11</option>
+                        <option value="90000">12</option>
+                        <option value="97500">13</option>
+                        <option value="105000">14</option>
+                        <option value="112500">15</option>
+                  </select>
+                  <select id="hydra" class="form-select" aria-label="Default select example">
+                    <option selected value="0">HYDRAULIKA</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="14850">Posiada</option>
+                  </select>
+                  <select id="eTransport" class="form-select" aria-label="Default select example">
+                    <option selected value="0">E-TRANSPORTER</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="15000">Posiada</option>
+                  </select>
+                  <select id="intakesR" class="form-select" aria-label="Default select example">
+                    <option selected value="0">WLOTY (DACH)</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="3500">1035</option>
+                    <option value="4000">1038</option>
+                    <option value="2360">1006</option>
+                    <option value="3300">1032</option>
+                    <option value="3800">1033</option>
+                    <option value="3800">1053</option>
+                    <option value="3500">1054</option>
+                    <option value="2400">1055</option>
+                    <option value="2400">1061</option>
+                    <option value="3750">1068</option>
+                    <option value="3250">1067</option>
+                    <option value="2700">1088</option>
+                    <option value="3600">1091</option>
+                    <option value="1800">1103</option>
+                  </select>
+                  <select id="intakesM" class="form-select" aria-label="Default select example">
+                    <option selected value="0">WLOTY (MASKA)</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="1500">1004</option>
+                    <option value="1700">1005</option>
+                    <option value="1500">1011</option>
+                    <option value="1800">1012</option>
+                    <option value="1400">1142</option>
+                    <option value="1400">1143</option>
+                    <option value="1200">1144</option>
+                    <option value="1200">1145</option>
+                  </select>
+            </div>
+        </div>
+        <div id="electricVehicles" class="row">
+            <div class="col">
+            <select class="form-select" id="modelEle" aria-label="Default select example">
+                <option selected value="0">MODEL POJAZDU</option>
+                <option value="90000">Blista 1.8 Elektryczna</option>
+                <option value="130000">Sabre 1.8 Elektryczna</option>
+	            <option value="160000">Flash 1.8 Elektryczny</option>   
+	            <option value="200000">Fortune 2.0 Elektryczna</option>
+	            <option value="210000">Buffalo 1.8 Elektryczny</option>
+                <option value="230000">Jeser 1.8 Elektryczny</option>
+	            <option value="230000">Premier 2.0 Elektryczny (Sedan)</option>
+                <option value="280000">Club 2.2 Elektryczny</option>
+                <option value="500000">Comet 2.0 Elektryczny</option>
+                <option value="550000">Banshee Targa 2.0 Elektryczne</option>
+              </select>
+              <select class="form-select" id="rimsEle" aria-label="Default select example">
+                <option selected value="0">FELGI</option>
+                <option value="0">NIE POSIADA</option>
+                <option value="1305">OFF-ROAD(1025)</option>
+                <option value="1305">SHADOW(1073)</option>
+                <option value="1305">MEGA(1074)</option>
+                <option value="1305">RIMSHINE(1075)</option>
+                <option value="1305">WIRES(1076)</option>
+                <option value="1305">CLASSIC(1077)</option>
+                <option value="1305">TWIST(1078)</option>
+                <option value="1305">CUTTER(1079)</option>
+                <option value="1305">SWITCH(1080)</option>
+                <option value="1305">GROVE(1081)</option>  
+                <option value="1305">IMPORT(1082)</option> 
+                <option value="1305">DOLLAR(1083)</option>
+                <option value="1305">TRANCE(1084)</option>
+                <option value="1305">ATOMIC(1085)</option>
+                <option value="1305">AHAB(1096)
+              </select>
+              <select class="form-select" id="spoilerEle" aria-label="Default select example">
+                <option selected value="0">SPOJLER</option>
+                <option value="0">NIE POSIADA</option>
+                    <option value="2200">(1000)</option>
+                    <option value="2750">(1001)</option>
+                    <option value="2200">(1002)</option>
+                    <option value="2750">(1003)</option>
+                    <option value="1400">(1014)</option>
+                    <option value="2200">(1015)</option>
+                    <option value="2300">(1016)</option>
+                    <option value="2550">(1023)</option>
+                    <option value="1700">(1049)</option>
+                    <option value="1400">(1050)</option>
+                    <option value="1400">(1058)</option>
+                    <option value="1850">(1060)</option>
+                    <option value="4150">(1138)</option>
+                    <option value="3600">(1139)</option>
+                    <option value="3200">(1146)</option>
+                    <option value="3850">(1147)</option>
+                    <option value="4500">(1158)</option>
+                    <option value="3200">(1162)</option>
+                    <option value="2000">(1163)</option>
+                    <option value="4500">(1164)</option>
+              </select>
+              <select class="form-select" id="limiterEle" aria-label="Default select example">
+                <option selected value="0">OGRANICZNIK</option>
+                <option value="0">NIE POSIADA</option>
+               <option value="1800">POSIADA</option>
+              </select>
+              <select class="form-select" id="fotoradarEle" aria-label="Default select example">
+                <option selected value="0">WYKRYWACZ FOTORADARÓW</option>
+                <option value="0">NIE POSIADA</option>
+                <option value="4500">POSIADA</option>
+              </select>
+              <select class="form-select" id="radioEle" aria-label="Default select example">
+                <option selected value="0">CB RADIO</option>
+                <option value="0">NIE POSIADA</option>
+                <option value="1260">Posiada</option>
+              </select>
+              <select class="form-select" id="stereoEle" aria-label="Default select example">
+                <option selected value="0">STEREO</option>
+                <option value="0">NIE POSIADA</option>
+                <option value="270">Posiada</option>
+              </select>
+              <select class="form-select" id="up1Ele" aria-label="Default select example">
+                <option selected value="0">UP1</option>
+                <option value="0">NIE POSIADA</option>
+                <option value="42500">Posiada</option>
+              </select>
+              <select class="form-select" id="up2Ele" aria-label="Default select example">
+                <option selected value="0">UP2</option>
+                <option value="0">NIE POSIADA</option>
+                <option value="25000">Posiada</option>
+              </select>
+              <select class="form-select" id="up3Ele" aria-label="Default select example">
+                <option selected value="0">UP3</option>
+                <option value="0">NIE POSIADA</option>
+                <option value="25000">Posiada</option>
+              </select>
+              </div> 
+            <div class="col">
+                  <select class="form-select" id="up4Ele" aria-label="Default select example">
+                    <option selected value="0">UP4</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="25000">Posiada</option>
+                  </select>
+                <select class="form-select" id="absEle" aria-label="Default select example">
+                    <option selected value="0">ABS</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="16200">Posiada</option>
+                  </select>
+                  <select class="form-select" id="fakeNitroEle" aria-label="Default select example">
+                    <option selected value="0">ATRAPA NITRO</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="10000">Duża butla (1008)</option>
+                    <option value="17500">Mała butla (1009)</option>
+                    <option value="20000">Dwie małe butle (1010)</option>
+                  </select>
+                  <select class="form-select" id="nitroEle" aria-label="Default select example">
+                    <option selected value="0">NITRO</option>
+                    <option value="0">NIE POSIADA</option>
+                    <option value="180000">Posiada</option>
+                  </select>
+                  <select class="form-select" id="glassEle" aria-label="Default select example">
+                    <option selected value="0">PRZYCIEMNIANIE SZYB</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="7500">80%</option>
+                    <option value="17500">60%</option>   
+                    <option value="27500">40%</option>
+                    <option value="37500">20%</option>
+                  </select>
+                  <select class="form-select" id="counterColorEle" aria-label="Default select example">
+                    <option selected value="0">KOLOR LICZNIKA</option>
+                    <option value="0">Nie posiada</option>
+                    <option class="white" value="5000">Biały</option>
+                    <option class="ciemny" value="5000">Ciemny</option>
+                    <option class="cargo" value="7000">Cargo</option>
+                    <option class="czekolada" value="7000">Czekoladowy</option>
+                    <option class="mieta" value="7000">Miętowy</option>
+                    <option class="losos" value="7000">Łososiowy</option>
+                    <option class="ziel-ciemny" value="7000">Zielony (ciemny)</option>
+                    <option class="granat" value="7000">Granatowy</option>
+                    <option class="limonka" value="7000">Limonkowy</option>
+                    <option class="oliwka" value="7000">Oliwkowy</option>
+                    <option class="kardynal" value="7000">Kardynalski</option>
+                    <option class="winny" value="7000">Winny</option>
+                    <option class="kawa" value="7000">Kawowy</option>
+                    <option class="szkarlat" value="7000">Szkarłatny</option>
+                    <option class="butelka" value="7500">Butelkowy</option>
+                    <option class="pomarancz" value="7500">Pomarańczowy</option>
+                    <option class="fresh" value="7500">FRESH</option>
+                    <option class="lazur" value="7500">Lazurowy</option>
+                    <option class="carrot" value="7500">CARROT</option>
+                    <option class="rubin" value="7500">Rubinowy</option>
+                    <option class="zolty" value="7500">Żółty</option>
+                    <option class="purpur" value="7500">Purpurowy</option>
+                    <option class="ultram" value="7500">Ultramaryna</option>
+                    <option class="herbata" value="7500">Herbaciany</option>
+                    <option class="chabr" value="7500">Chabrowy</option>
+                    <option class="cyklamen" value="7500">Cyklamen</option>
+                    <option class="mahon" value="8000">Mahoniowy</option>
+                    <option class="banan" value="8000">Bananowy</option>
+                    <option class="czerwony" value="8000">Czerwony</option>
+                    <option class="ice" value="8000">ICE</option>
+                    <option class="ziel-jasny" value="8000">Zielony(jasny)</option>
+                    <option class="nieb-ciemny" value="8000">Niebieski(ciemny)</option>
+                    <option class="morska-ziel" value="8000">Morska zieleń</option>
+                    <option class="zloty" value="8000">Złocisty</option>
+                    <option class="szmaragd" value="8000">Szmaragdowy</option>
+                    <option class="laguna" value="8000">Lagunowy</option>
+                    <option class="miod" value="8000">Miodowy</option>
+                    <option class="roz" value="8000">Róż Indyjski</option>
+                    <option class="orzech" value="8000">Orzechowy</option>
+                    <option class="indygo" value="8000">Indygo</option>
+                    <option class="alfons" value="8000">Alfonsy</option>
+                    <option class="loudowy" value="8000">Loudowy</option>
+                  </select>
+                  <select class="form-select" id="lampColorEle" aria-label="Default select example">
+                    <option selected value="0">KOLOR LAMP</option>
+                    <option class="white" value="0">Nie posiada (Białe)</option>
+                    <option class="cargo" value="75000">Cargo</option>
+                    <option class="losos" value="75000">Łososiowy</option>  
+                    <option class="mieta" value="75000">Miętowy</option>
+                    <option class="czekolada" value="75000">Czekoladowy</option>
+                    <option class="ziel-ciemny" value="75000">Zielony (ciemny)</option>      
+                    <option class="oliwka" value="75000">Oliwkowy</option>   
+                    <option class="kardynal" value="75000">Kardynalski</option>   
+                    <option class="butelka" value="75000">Butelkowy</option>             
+                    <option class="granat" value="80000">Granatowy</option>         
+                    <option class="limonka" value="80000">Limonkowy</option>           
+                    <option class="pomarancz" value="80000">Pomarańczowy</option>       
+                    <option class="purpur" value="80000">Purpurowy</option> 
+                    <option class="carrot" value="80000">CARROT</option>       
+                    <option class="kawa" value="75000">Kawowy</option>        
+                    <option class="zolty" value="80000">Żółty</option>       
+                    <option class="nieb-ciemny" value="80000">Niebieski (ciemny)</option>       
+                    <option class="czerwony" value="80000">Czerwony</option>
+                    <option class="szkarlat" value="80000">Szkarłatny</option>  
+                    <option class="winny" value="80000">Winny</option>
+                    <option class="ultram" value="80000">Ultramaryna</option>
+                    <option class="herbata" value="80000">Herbaciany</option>
+                    <option class="mahon" value="80000">Mahoniowy</option>
+                    <option class="banan" value="80000">Bananowy</option>
+                    <option class="fresh" value="85000">FRESH</option>       
+                    <option class="rubin" value="85000">Rubinowy</option>     
+                    <option class="ice" value="85000">ICE</option>      
+                    <option class="ziel-jasny" value="85000">Zielony(jasny)</option>     
+                    <option class="lazur" value="85000">Lazurowe</option>
+                    <option class="chabr" value="85000">Chabrowe</option>        
+                    <option class="cyklamen" value="85000">Cyklamenowe</option>        
+                    <option class="morska-ziel" value="85000">Morska zieleń</option>   
+                    <option class="zloty" value="85000">Złociste</option>
+                    <option class="roz" value="85000">Róż Indyjski</option>    
+                    <option class="miod" value="85000">Miodowe</option>   
+                    <option class="orzech" value="85000">Orzechowe</option>
+                    <option class="szmaragd" value="90000">Szmaragdowe</option>       
+                    <option class="laguna" value="90000">Lagunowe</option>    
+                    <option class="indygo" value="90000">Indygo</option>       
+                    <option class="alfons" value="90000">Alfonsowe</option>       
+                    <option class="loudowy" value="90000">Loudowy'owe</option>
+                  </select>
+                  <select class="form-select" id="keysEle" aria-label="Default select example">
+                    <option selected value="0">KLUCZE</option>
+                    <option value="0">0</option>
+                        <option value="7500">1</option>
+                        <option value="15000">2</option>
+                        <option value="22500">3</option>
+                        <option value="30000">4</option>
+                        <option value="37500">5</option>
+                        <option value="45000">6</option>
+                        <option value="52500">7</option>
+                        <option value="60000">8</option>
+                        <option value="67500">9</option>
+                        <option value="75000">10</option>
+                        <option value="82500">11</option>
+                        <option value="90000">12</option>
+                        <option value="97500">13</option>
+                        <option value="105000">14</option>
+                        <option value="112500">15</option>
+                  </select>
+                  <select class="form-select" id="hydraEle" aria-label="Default select example">
+                    <option selected value="0">HYDRAULIKA</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="14850">Posiada</option>
+                  </select>
+                  <select class="form-select" id="eTransportEle" aria-label="Default select example">
+                    <option selected value="0" value="0">E-TRANSPORTER</option>
+                    <option value="0">Nie posiada</option>
+                    <option value="15000">Posiada</option>
+                  </select>
+              </div>
+        </div>
+        <div id="faq" class="row">
+            <div class="col">
+                <div>
+                    <h1>FAQ - Kalkulator 4Life</h1><br></div>
+<p>1. Co to jest FAQ?</p> 
+Są to zbiory często zadawanych pytań i odpowiedzi na nie, mające na celu udzielenie danemu użytkownikowi 
+ <br>
+ serwisu internetowego pomocy bez konieczności angażowania
+<br>
+ do tego jakichkolwiek osób. - <a href="https://pl.wikipedia.org/wiki/FAQ">wikipedia.org/wiki/FAQ</a></b>
+ <br>
+ <p>2. W jaki sposób jest obliczana wartość pojazdu?</p>
+Wartość pojazdu jest obliczana na zasadach obowiązujących 
+<br>
+na giełdzie 4Life.
+Brana jest z <a href="https://mta4life.pl/forums/forum/640-ceny-katalogowe-pojazd%C3%B3w/">ceny katalogowej.</a>
+<br>
+<p>3. Kto jest autorem tej strony?</p>
+Autorem strony są yeskear (240693) & M4rcinek (232908)- gracze 4Life.
+<br>
+<p>4. Gdzie mogę zgłosić błąd na stronie?</p>
+Błąd na stronie można zgłosić na:
+<li>Forum w wiadomości prywatnej do nas.</li>
+<li>Komunikatorze discord w wiadomości prywatnej: yeskear#3507 | v3rt0x </li>
+<li>W grze. nick: yeskear, M4rcinek </li>
+<p>5. Wartość pojazdu
+Wyliczona przez kalkulator cena nie gwarantuje sprzedaży dokładnie w tej cenie. Podane ceny są wyliczone z dokumentów 4Life.<br>
+ A cena realna zależy od obecnej w danym czasie sytuacji na rynku.</p>
+<p>6. Wytepali auto bo zła cena</p>
+Nie bierzemy odpowiedzialności za wytepanie auta ze względu na złą cenę podaną przez kalkulator.
+<br>
+<p>7. Czy strona zbiera dane?</p>
+ Tak, strona zbiera podstawowe dane służące do poprawy komfortu użytkowania strony.
+ Zbieramy dane tj. System operacyjny użytkownika, przeglądarka z jakiej korzysta.
+ <br>
+<p>Kalkulator nie jest wstanie wycenić pojazdu z unikatowymi częściami,
+takimi jak:</p>
+<li>Unikatowe baki</li>
+<li>Unikatowe lampy i liczniki</li>
+<li>Niskie ID</li>
+<li>Aut z unikatowymi silnikami takimi jak Infernus 1.2 etc.</li>
+<li>Aut unikatowych takich jak Kart, wózek golfowy, etc.</li>
+Wartość podana przez kalkulator nie uwzględnia:</li><br>
+<li>Przebiegu</li>
+<li>Stanu oraz typu opon</li>
+<li>Stanu zatankowania pojazdu</li> <br>
+<b>Komponenty i inne części tuningowe liczone są następująco:<br></b>
+<li>Wartość komponentów wynosi 50% wartości ich montażu.</li>
+<li><a href="https://mta4life.pl/forums/topic/307109-aktualne-kwoty-za-demonta%C5%BC-cz%C4%99%C5%9Bci-w-prywatnych-pojazdach/">Wartość części tuningowych demontowywalnych wynosi ich wartość demontażu (zależnie od części wynosi %)</a></li>
+            </div>
+        </div>
+    </main>
+    </div>
+    <script src="./src/main.js"></script>
+</body>
+</html>
